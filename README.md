@@ -7,5 +7,6 @@
 ```
 docker build -t yutaono/nginscript .
 docker run -v `pwd`/nginx.conf:/etc/nginx/nginx.conf:ro -p 80:8080 -d yutaono/nginscript
-curl ${DOCKER_HOST}
+curl $(docker-machine ip YOUR_DOCKER_MACHINE_NAME)
+> Hello, World!
 ```
